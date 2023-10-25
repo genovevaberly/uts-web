@@ -123,15 +123,15 @@ input[type="password"]:focus {
                 </div>
                 <div class="mb-3">
                     <label for="InputPassword" class="form-label"><strong>Phone Number</strong></label>
-                    <input type="password" class="form-control" id="inputPassword">
+                    <input type="text" class="form-control" id="inputPassword">
                 </div>
                 <div class="mb-3">
                     <label for="InputPassword" class="form-label"><strong>Country</strong></label>
-                    <input type="password" class="form-control" id="inputPassword">
+                    <input type="text" class="form-control" id="inputPassword">
                 </div>
                 <div class="mb-3">
                     <label for="InputPassword" class="form-label"><strong>Username or Email Address</strong></label>
-                    <input type="password" class="form-control" id="inputPassword">
+                    <input type="email" class="form-control" id="inputPassword">
                 </div>
                 <div class="mb-3">
                     <label for="InputPassword" class="form-label"><strong>Password</strong></label>

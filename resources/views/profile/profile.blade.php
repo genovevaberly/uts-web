@@ -91,6 +91,9 @@
         <div>
             <p>Current bid $259.0</p>
         </div>
+        <div>
+            <p style="border: 1px solid #DFDDDD; background-color: #dff2f5; border-radius: 5%; margin-bottom: 10px;">Edit</p>
+        </div>
     </div>
 
     <div class="cards">
@@ -106,13 +109,16 @@
         <div>
             <p>Current bid $299.0</p>
         </div>
+        <div>
+            <p style="border: 1px solid #DFDDDD; background-color: #dff2f5; border-radius: 5%; margin-bottom: 10px;">Edit</p>
+        </div>
     </div>
 </div>
 
 <br><br>
 
 
-<h2 style="border: 5px solid aqua; border-radius: 5%; font-weight: bold; background-color: aqua; text-align: center;"><a href="{{url('add')}}">Add Product</a></p>
+<a href="{{url('add')}}"><h2 style="border: 5px solid aqua; border-radius: 5%; font-weight: bold; background-color: aqua; text-align: center;">Add Product</a></p>
 
 
 </div>
