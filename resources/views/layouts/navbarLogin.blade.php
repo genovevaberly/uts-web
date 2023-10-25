@@ -6,11 +6,13 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    
 </head>
 
 <style>
     .borderNavbarRight{
-        border: 1px solid #000; 
+        border: 1px solid aqua; 
         padding: 5px 10px; 
         border-radius: 5px;
         text-decoration: none;
@@ -21,17 +23,17 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-    <a class="navbar-brand" href="#">ElliteBid.com</a>
+    <a class="navbar-brand" href="#" style="font-weight: bold; color: #016170">ElliteBid.com</a>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#" class="borderNavbarRight" style="margin-right: 10px;"> Sign Up</a></li>
-      <li><a href="#" class="borderNavbarRight"> Login </a></li>
+      <li><a href="{{ url('signup') }}" class="borderNavbarRight" style="margin-right: 10px; background-color: aqua; font-weight: bold; color: black;"> Sign Up</a></li>
+      <li><a href="{{ url('/') }}" class="borderNavbarRight" style="background-color: aqua; font-weight: bold; color: black;"> Login </a></li>
     </ul>
     </div>
     </div>
     </nav>
 
-    <div class="container-mt4">
-        @yield('container')
+    <div class="container">
+        @yield('content')
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-
