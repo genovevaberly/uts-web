@@ -25,6 +25,10 @@ Route::get('/profile', function () {
     return view('profile.profile');
 });
 
+Route::get('/profile2', function () {
+    return view('profile.profile2');
+});
+
 Route::get('/add', function () {
     return view('profile.add');
 });
@@ -35,4 +39,12 @@ Route::get('/explore', function () {
 
 Route::get('/placeBid', function () {
     return view('explore.placeBid');
+});
+
+Route::get('/edit', function () {
+    return view('profile.edit');
+});
+
+Route::get('/pay', function () {
+    return view('profile.pay');
 });

@@ -73,8 +73,8 @@
 <br>
 
 <div class="flex-container">
-  <div><a href="#" style="text-decoration: underline;">Your Product</a></div>
-  <div><a href="{{ url('profile2') }}">Your Live Auction</a></div> 
+  <div><a href="{{url('profile')}}">Your Product</a></div>
+  <div><a href="" style="text-decoration: underline;">Your Live Auction</a></div> 
 </div>
 
 <div class="flex-container">
@@ -92,7 +92,7 @@
             <p>Current bid $259.0</p>
         </div>
         <div>
-            <p style="border: 1px solid #DFDDDD; background-color: #dff2f5; border-radius: 5%; margin-bottom: 10px;"><a href="{{url('edit')}}">Edit</a></p>
+            <p style="border: 1px solid #DFDDDD; background-color: #dff2f5; border-radius: 5%; margin-bottom: 10px;"><a href="{{url('edit')}}">Pay</a></p>
         </div>
     </div>
 
@@ -110,7 +110,7 @@
             <p>Current bid $299.0</p>
         </div>
         <div>
-            <p style="border: 1px solid #DFDDDD; background-color: #dff2f5; border-radius: 5%; margin-bottom: 10px;"><a href="{{url('edit')}}">Edit</a></p>
+            <p style="border: 1px solid #DFDDDD; background-color: #dff2f5; border-radius: 5%; margin-bottom: 10px;"><a href="{{url('pay')}}">Pay</a></p>
         </div>
     </div>
 </div>
