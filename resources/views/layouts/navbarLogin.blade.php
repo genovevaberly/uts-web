@@ -25,8 +25,8 @@
     <div class="container-fluid">
     <a class="navbar-brand" href="#" style="font-weight: bold; color: #016170">ElliteBid.com</a>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="{{ url('signup') }}" class="borderNavbarRight" style="margin-right: 10px; background-color: aqua; font-weight: bold; color: black;"> Sign Up</a></li>
-      <li><a href="{{ url('/') }}" class="borderNavbarRight" style="background-color: aqua; font-weight: bold; color: black;"> Login </a></li>
+      <li><a href="{{ url('signup') }}" class="borderNavbarRight" style="margin-right: 10px; background-color: #016170; font-weight: bold; color: white;"> Sign Up</a></li>
+      <li><a href="{{ url('/') }}" class="borderNavbarRight" style="background-color: #016170; font-weight: bold; color: white;"> Login </a></li>
     </ul>
     </div>
     </div>

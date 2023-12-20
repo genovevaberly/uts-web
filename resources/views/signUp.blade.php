@@ -118,7 +118,7 @@ input[type="password"]:focus {
         <div class="card-text">
             <form>
                 <div class="mb-3">
-                    <label for="InputEmail" class="form-label"><strong>Full Name</strong></label>
+                    <label for="InputEmail" class="form-label"><strong>Username</strong></label>
                     <input type="email" class="form-control" id="inputEmail">
                 </div>
                 <div class="mb-3">
@@ -126,11 +126,7 @@ input[type="password"]:focus {
                     <input type="text" class="form-control" id="inputPassword">
                 </div>
                 <div class="mb-3">
-                    <label for="InputPassword" class="form-label"><strong>Country</strong></label>
-                    <input type="text" class="form-control" id="inputPassword">
-                </div>
-                <div class="mb-3">
-                    <label for="InputPassword" class="form-label"><strong>Username or Email Address</strong></label>
+                    <label for="InputPassword" class="form-label"><strong>Email Address</strong></label>
                     <input type="email" class="form-control" id="inputPassword">
                 </div>
                 <div class="mb-3">
@@ -140,6 +136,9 @@ input[type="password"]:focus {
                 <div class="containerBtn">
                     <button type="submit" class="btn btn-primary center-button" style="height: 40px;" id="btn"><a style="text-decoration:none; color:white; font-weight: bold;" href="{{ url('explore') }}">Log in</a></button>
                 </div>
+                    <p class="text-center">
+                        Sudah punya akun? <a href="{{route('login')}}">Login Disini</a>
+                    </p>
                 </form>
         </div>
     </div>       

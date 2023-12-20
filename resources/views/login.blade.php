@@ -18,7 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 30px;
+        margin-top: 50px;
     }
 
     .card{
@@ -127,8 +127,11 @@ input[type="password"]:focus {
                     <input type="password" class="form-control" id="inputPassword">
                 </div>
                 <div class="containerBtn">
-                    <button type="submit" class="btn btn-primary center-button" style="height: 40px;" id="btn"><a style="text-decoration:none; color:white; font-weight: bold;" href="{{ url('explore') }}" style="text-decoration: none; color:black; ">Log in</a></button>
+                    <button type="submit" class="btn btn-primary center-button" style="height: 40px;" id="btn"><a style="text-decoration:none; color:white; font-weight: bold;" href="{{ url('explore') }}" style="text-decoration: none; color:black; ">Login</a></button>
                 </div>
+                <p class="text-center">
+                    Sudah punya akun? <a href="{{route('login')}}">Login Disini</a>
+                </p>
                 </form>
         </div>
     </div>       
