@@ -8,37 +8,45 @@ use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
-    public function login(){
-        if(Auth::check()){
+    public function login()
+    {
+        if (Auth::check()) {
             return redirect('home');
-        }else{
+        } else {
             return view('login');
         }
     }
 
-    public function actionLogin(Request $request){
-        $data = [
-            'email'=> $request->input('email'),
-            'password'=> $request->input('password'),
-        ];
+    public function actionLogin(Request $request)
+    {
+        $tempUser = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
 
-        if(Auth::attempt($data)){
-            $user = Auth::user();
-
-            if($user->active){
-                return redirect('home');
-            }else{
-                Auth::logout();
-                Session::flash('error', 'Akun anda belum diverifikasi. Silahkan cek email anda.');
-                return redirect('/');
-            }
-        }else{
-            Session::flash('error', 'Email atau password salah');
-            return redirect('/');
+        if (!Auth::attempt($tempUser)) {
+            return back()->withErrors(['email' => 'Invalid credentials']);
         }
+
+        $user = Auth::user();
+
+        if (!$user->active) {
+            Auth::logout();
+            toastr()->warning('Aktifkan akun Anda di email');
+        }
+
+        if ($user->email == 'admin@gmail.com') {
+            return redirect('adminPage');
+        } else {
+            return redirect('home');
+        }
+
+
+
     }
 
-    public function actionLogout(){
+    public function actionLogout()
+    {
         Auth::logout();
         return redirect('/');
     }

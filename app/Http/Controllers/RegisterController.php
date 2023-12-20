@@ -23,7 +23,8 @@ class RegisterController extends Controller
         $user = User::create ([
             'email' => $request->email,
             'username' => $request->username,
-            'password' => Hash::make($request->password),
+            'no_telepon' => $request->no_telepon,
+            'password' => bcrypt($request->password),
             'verify_key' => $str,
         ]);
 
@@ -35,9 +36,8 @@ class RegisterController extends Controller
         ];
 
         Mail::to($request->email)->send(new MailSend($details));
-
-        Session::flash('message', 'Link verifikasi telah dikirim ke email anda. Silakan cek email anda untuk mengaktifkan akun');
-        return redirect('signUp');
+        toastr()->success('Silahkan Check di email Anda untuk verifikasi!');
+        return redirect('/');
     }
 
     public function verify($verify_key) {

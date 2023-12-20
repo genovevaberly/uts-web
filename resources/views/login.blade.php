@@ -6,13 +6,13 @@
         background-image: url("img/bgmain.png");
     }
 
-    .forgot{
-    display: inline;
-    margin-left: 220px;
-    
+    .forgot {
+        display: inline;
+        margin-left: 220px;
+
     }
 
-    .global-container{
+    .global-container {
         height: 70%;
         width: 100%;
         display: flex;
@@ -21,15 +21,16 @@
         margin-top: 50px;
     }
 
-    .card{
+    .card {
         opacity: 80%;
     }
 
-    .login-form{
+    .login-form {
         padding: 30px 30px 30px 30px;
         border-radius: 10%;
     }
-/* .global-container1{
+
+    /* .global-container1{
     height: 120%;
     display: flex;
     align-items: center;
@@ -100,15 +101,11 @@ input[type="password"]:focus {
     margin-left: 90%;
 } */
 
-.containerBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-    
+    .containerBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 
 <div class="global-container">
@@ -117,23 +114,26 @@ input[type="password"]:focus {
             <h1 class="card-title text-center" style="color: black;">Welcome to ElliteBid.com</h1>
         </div>
         <div class="card-text">
-            <form>
+            <form action="{{route('actionLogin')}}" method="POST">
+                @csrf
                 <div class="mb-3">
-                    <label for="InputEmail" class="form-label"><strong>Username or Email address</strong></label>
-                    <input type="email" class="form-control" id="inputEmail">
+                    <label for="email" class="form-label"><strong>Email</strong></label>
+                    <input type="email" name="email" class="form-control" placeholder="Email" id="email" required>
                 </div>
                 <div class="mb-3">
-                    <label for="InputPassword" class="form-label"><strong>Password</strong></label>
-                    <input type="password" class="form-control" id="inputPassword">
+                    <label for="password" class="form-label"><strong>Password</strong></label>
+                    <input type="password" name="password" class="form-control" plceholder="Password" id="password" required>
                 </div>
                 <div class="containerBtn">
-                    <button type="submit" class="btn btn-primary center-button" style="height: 40px;" id="btn"><a style="text-decoration:none; color:white; font-weight: bold;" href="{{ url('explore') }}" style="text-decoration: none; color:black; ">Login</a></button>
+                    <button type="submit" class="btn btn-primary center-button" style="height: 40px;" id="btn"><a
+                            style="text-decoration:none; color:white; font-weight: bold;"
+                            style="text-decoration: none; color:black; ">Log In</a></button>
                 </div>
                 <p class="text-center">
-                    Sudah punya akun? <a href="{{route('login')}}">Login Disini</a>
+                    Belum punya akun? <a href="{{route('register')}}">Register Disini</a>
                 </p>
-                </form>
+            </form>
         </div>
-    </div>       
-</div>    
+    </div>
+</div>
 @endsection

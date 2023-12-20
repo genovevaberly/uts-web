@@ -116,25 +116,26 @@ input[type="password"]:focus {
             <h5 style="text-align: center;">Sign up and begin your treasure hunt</h3>
         </div>
         <div class="card-text">
-            <form>
+            <form action="{{route('actionRegister')}}" method="POST">
+                @csrf
                 <div class="mb-3">
-                    <label for="InputEmail" class="form-label"><strong>Username</strong></label>
-                    <input type="email" class="form-control" id="inputEmail">
+                    <label for="username" class="form-label"><strong>Username</strong></label>
+                    <input type="text" class="form-control" name="username" id="username" required>
                 </div>
                 <div class="mb-3">
-                    <label for="InputPassword" class="form-label"><strong>Phone Number</strong></label>
-                    <input type="text" class="form-control" id="inputPassword">
+                    <label for="no_telepon" class="form-label"><strong>Phone Number</strong></label>
+                    <input type="text" class="form-control" name="no_telepon" id="no_telepon" required>
                 </div>
                 <div class="mb-3">
-                    <label for="InputPassword" class="form-label"><strong>Email Address</strong></label>
-                    <input type="email" class="form-control" id="inputPassword">
+                    <label for="email" class="form-label"><strong>Email Address</strong></label>
+                    <input type="email" class="form-control" name="email" id="email" required>
                 </div>
                 <div class="mb-3">
-                    <label for="InputPassword" class="form-label"><strong>Password</strong></label>
-                    <input type="password" class="form-control" id="inputPassword">
+                    <label for="password" class="form-label"><strong>Password</strong></label>
+                    <input type="password" class="form-control" id="password" required>
                 </div>
                 <div class="containerBtn">
-                    <button type="submit" class="btn btn-primary center-button" style="height: 40px;" id="btn"><a style="text-decoration:none; color:white; font-weight: bold;" href="{{ url('explore') }}">Log in</a></button>
+                    <button type="submit" class="btn btn-primary center-button" style="height: 40px;" id="btn"><a style="text-decoration:none; color:white; font-weight: bold;" href="">Sign Up</a></button>
                 </div>
                     <p class="text-center">
                         Sudah punya akun? <a href="{{route('login')}}">Login Disini</a>

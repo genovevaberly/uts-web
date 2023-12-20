@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\Api\LoginController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\Api\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +26,7 @@ use App\Http\Controllers\RegisterController;
 // Route::get('register/verify/{verify_key}', [RegisterController::class, 'verify'])->name('verify');
 
 
+Route::post('/register', [RegisterController::class, 'register']);
+Route::get('/register/verify/{verify_key}', [RegisterController::class, 'verify']);
+
+Route::post('/login', [LoginController::class, 'login']);
